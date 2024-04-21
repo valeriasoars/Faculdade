@@ -1,21 +1,15 @@
-package Classes;
+package Entitiy;
+import Entitiy.Interface.ICalcularMediaAlunos;
 
+public class AlunoGraduacao extends Aluno implements ICalcularMediaAlunos {
 
-import Classes.Interface.CalcularMediaAlunos;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class AlunoPosGraduacao extends Aluno implements CalcularMediaAlunos {
-
-
-    public AlunoPosGraduacao(String nome, String endereco, String matricula, Curso curso) {
+    public AlunoGraduacao(String nome, String endereco, String matricula, Curso curso) {
         super(nome, endereco, matricula, curso);
     }
 
     @Override
-    public void disciplinasCursadas(Disciplina disciplina) {
-        super.disciplinasCursadas(disciplina);
+    public void adicionarDisciplinasCursadas(Disciplina disciplina) {
+        super.adicionarDisciplinasCursadas(disciplina);
     }
 
     @Override
@@ -35,11 +29,13 @@ public class AlunoPosGraduacao extends Aluno implements CalcularMediaAlunos {
         return somaNotas / numDisciplinas;
     }
 
+
     @Override
     public void apresentar() {
-        System.out.println("Aluno Pós Graduação");
+        System.out.println("Aluno Graduação");
         super.apresentar();
         System.out.println("Media: " + calcularmedia());
-
+        System.out.println("-----");
     }
+
 }

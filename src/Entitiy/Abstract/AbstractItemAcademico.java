@@ -1,12 +1,12 @@
-package Classes.Abstrata;
+package Entitiy.Abstract;
 
-import Classes.Interface.Apresentar;
+import Entitiy.Interface.IApresentar;
 
-public abstract class ItemAcademico implements Apresentar {
+public abstract class AbstractItemAcademico implements IApresentar {
     protected String nome;
     protected String codigo;
 
-    public ItemAcademico(String nome, String codigo) {
+    public AbstractItemAcademico(String nome, String codigo) {
         this.nome = nome;
         this.codigo = codigo;
     }

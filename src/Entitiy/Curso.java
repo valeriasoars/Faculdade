@@ -1,11 +1,10 @@
-package Classes;
-import Classes.Abstrata.ItemAcademico;
-import Classes.Interface.Apresentar;
+package Entitiy;
+import Entitiy.Abstract.AbstractItemAcademico;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Curso extends ItemAcademico  {
+public class Curso extends AbstractItemAcademico {
 
     private List<Disciplina> disciplinasObrigatorias;
     private List<Disciplina> disciplinasEletivas;
@@ -17,22 +16,6 @@ public class Curso extends ItemAcademico  {
     }
 
 
-    public List<Disciplina> getDisciplinasObrigatorias() {
-        return disciplinasObrigatorias;
-    }
-
-   /* public void setDisciplinasObrigatorias(List<Disciplina> disciplinasObrigatorias) {
-        this.disciplinasObrigatorias = disciplinasObrigatorias;
-    }
-
-    public List<Disciplina> getDisciplinasEletivas() {
-        return disciplinasEletivas;
-    }
-
-    public void setDisciplinasEletivas(List<Disciplina> disciplinasEletivas) {
-        this.disciplinasEletivas = disciplinasEletivas;
-    }*/
-
     public void adicionarDisciplinaObrigatoria(Disciplina disciplina) {
         disciplinasObrigatorias.add(disciplina);
     }
@@ -43,6 +26,7 @@ public class Curso extends ItemAcademico  {
 
     @Override
     public void apresentar() {
+
         System.out.println("Nome do curso: " + getNome());
         System.out.println("Codigo: " + getCodigo());
         System.out.println("Disciplinas obrigatorias: ");
@@ -53,5 +37,6 @@ public class Curso extends ItemAcademico  {
         for (Disciplina disciplina : disciplinasEletivas){
             System.out.println("- " + disciplina.getNome());
         }
+        System.out.println("-----");
     }
 }

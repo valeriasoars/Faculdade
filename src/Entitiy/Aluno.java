@@ -1,12 +1,9 @@
-package Classes;
-
-import Classes.Abstrata.Pessoa;
-
+package Entitiy;
+import Entitiy.Abstract.AbstractPessoa;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class Aluno extends Pessoa {
+public class Aluno extends AbstractPessoa {
 
     private String matricula;
     private Curso curso;
@@ -22,18 +19,13 @@ public class Aluno extends Pessoa {
 
     public List<Disciplina> getDisciplinasCursadas(){
         return disciplinasCursadas;
-
     }
 
     public void adicionarNotaDisciplina(Disciplina disciplina, double nota) {
         disciplina.setNota(nota);
     }
 
-    public void  setDisciplinasCursadas(List<Disciplina> disciplinasCursadas){
-        this.disciplinasCursadas = disciplinasCursadas ;
-    }
-
-    public void disciplinasCursadas(Disciplina disciplina){
+    public void adicionarDisciplinasCursadas(Disciplina disciplina){
         disciplinasCursadas.add(disciplina);
     }
 
@@ -41,22 +33,11 @@ public class Aluno extends Pessoa {
         return matricula;
     }
 
-    public Curso getCurso(){
-        return curso;
-    }
-
-    public void setCurso(Curso curso) {
-        this.curso = curso;
-    }
-
-
-
-
     @Override
     public void apresentar() {
         System.out.println("Nome do aluno: " + getNome());
         System.out.println("Matricula: " + getMatricula());
         System.out.println("Nome do curso: " + curso.getNome());
-
     }
+
 }

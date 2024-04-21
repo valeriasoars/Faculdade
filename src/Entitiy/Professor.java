@@ -1,12 +1,11 @@
-package Classes;
+package Entitiy;
 
-import Classes.Abstrata.Pessoa;
-import Classes.Interface.Apresentar;
+import Entitiy.Abstract.AbstractPessoa;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Professor extends Pessoa {
+public class Professor extends AbstractPessoa {
 
     private String departamento;
     private List<Disciplina> disciplinasMinistradas;
@@ -26,13 +25,6 @@ public class Professor extends Pessoa {
         this.departamento = departamento;
     }
 
-    public List<Disciplina> getDisciplinasMinistradas() {
-        return disciplinasMinistradas;
-    }
-
-    public void setDisciplinasMinistradas(List<Disciplina> disciplinasMinistradas) {
-        this.disciplinasMinistradas = disciplinasMinistradas;
-    }
 
     public void adicionarDisciplina(Disciplina disciplina){
         disciplinasMinistradas.add(disciplina);
@@ -45,7 +37,7 @@ public class Professor extends Pessoa {
         System.out.println("Departamento: " + getDepartamento());
         for (Disciplina disciplina: disciplinasMinistradas){
             System.out.println("Disciplinas ministradas: " + disciplina.getNome());
-
         }
+        System.out.println("-----");
     }
 }

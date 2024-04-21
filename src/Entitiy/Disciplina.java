@@ -1,10 +1,8 @@
-package Classes;
-import Classes.Abstrata.ItemAcademico;
-
-import java.util.Map;
+package Entitiy;
+import Entitiy.Abstract.AbstractItemAcademico;
 
 
-public class Disciplina extends ItemAcademico {
+public class Disciplina extends AbstractItemAcademico {
 
     private int cargaHoraria;
     private Professor professorResponsavel;
@@ -16,13 +14,6 @@ public class Disciplina extends ItemAcademico {
         this.professorResponsavel = professorResponsavel;
     }
 
-    public Professor getProfessorResponsavel() {
-        return professorResponsavel;
-    }
-
-    public void setProfessorResponsavel(Professor professorResponsavel) {
-        this.professorResponsavel = professorResponsavel;
-    }
 
     public int getCargaHoraria() {
         return cargaHoraria;
@@ -42,5 +33,6 @@ public class Disciplina extends ItemAcademico {
         System.out.println(("Codigo: " + getCodigo()));
         System.out.println(("Carga horaria: " + getCargaHoraria()));
         System.out.println("Professor responsavel: " + professorResponsavel.getNome());
+        System.out.println("-----");
     }
 }
