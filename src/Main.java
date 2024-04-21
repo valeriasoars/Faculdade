@@ -9,7 +9,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-
         Curso curso1 = new Curso("Ciência da Computação", "1010");
         Curso curso2 = new Curso(" Engenharia de Software", "2020");
 
