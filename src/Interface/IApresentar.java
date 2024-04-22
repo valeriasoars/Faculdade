@@ -1,4 +1,4 @@
-package Entitiy.Interface;
+package Interface;
 
 public interface IApresentar {
     void apresentar();

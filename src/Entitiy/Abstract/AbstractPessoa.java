@@ -1,6 +1,6 @@
 package Entitiy.Abstract;
 
-import Entitiy.Interface.IApresentar;
+import Interface.IApresentar;
 
 public abstract class AbstractPessoa implements IApresentar {
     protected String nome;

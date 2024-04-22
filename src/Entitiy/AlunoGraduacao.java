@@ -1,5 +1,5 @@
 package Entitiy;
-import Entitiy.Interface.ICalcularMediaAlunos;
+import Interface.ICalcularMediaAlunos;
 
 public class AlunoGraduacao extends Aluno implements ICalcularMediaAlunos {
 
